@@ -9,6 +9,6 @@ import { Hike } from './shared/hike';
 })
 export class AppComponent {
   title = 'an hicking app !';
-  hikes: Hike;
+  hikes: Hike[];
 
 }
