@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Hike } from './shared/hike';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'an hicking app !';
+  hikes: Hike;
+
 }
