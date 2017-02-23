@@ -1,7 +1,7 @@
 export class Hike {
   name: string;
-  area: string;
   region : string;
+  area: string;
   startingPoint : string;
   distance: number;
   distanceUnit: string;
