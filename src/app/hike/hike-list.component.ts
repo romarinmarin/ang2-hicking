@@ -9,10 +9,14 @@ import {Hike} from "../shared/hike";
 })
 export class HikeListComponent implements OnInit {
 
-  constructor() {
+
+
+  constructor( ) {
   }
 
   ngOnInit() {
+
+
   }
 
 }

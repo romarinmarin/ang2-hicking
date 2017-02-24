@@ -6,6 +6,7 @@ import {HikeModule} from "./hike/hike.module";
 
 
 import { AppComponent } from './app.component';
+import {HikeService} from "./hike/hike.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { AppComponent } from './app.component';
     HikeModule
 
   ],
-  providers: [],
+  providers: [HikeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
