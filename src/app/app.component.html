@@ -1,12 +1,9 @@
 <h1>
   {{title}}
-
-
 </h1>
 
 <div class="container">
-  <div *ngFor="let hike of hikes">
-    <hr>
-    {{hike.name}}
-  </div>
+
+    <router-outlet></router-outlet>
 </div>
+

@@ -1,3 +1,4 @@
+import { HikeService } from './hike.service';
 import {Component, OnInit} from '@angular/core';
 import {Hike} from "../shared/hike";
 
@@ -8,13 +9,18 @@ import {Hike} from "../shared/hike";
   styleUrls: ['./hike-list.component.css']
 })
 export class HikeListComponent implements OnInit {
+  hikes:Hike[];
 
-
-
-  constructor( ) {
+  constructor(  private _hikeService:HikeService) {
   }
 
   ngOnInit() {
+
+
+    this._hikeService.getHikesFrom()
+    .subscribe(
+        res => this.hikes = res,
+        err => console.error(err.status));
 
 
   }

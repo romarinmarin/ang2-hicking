@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Hike} from './shared/hike';
-import {HikeService} from "./hike/hike.service";
 
 
 @Component({
@@ -10,18 +8,14 @@ import {HikeService} from "./hike/hike.service";
 })
 export class AppComponent implements OnInit {
   title = 'an hicking app !';
-  hikes:Hike[];
 
-  constructor(private _hikeService:HikeService) {
+  constructor() {
 
   }
 
   ngOnInit() {
 
-    this._hikeService.getHikesFrom()
-                                .subscribe(
-                                    res => this.hikes = res,
-                                    err => console.error(err.status));
+
                                 }
 
 }
