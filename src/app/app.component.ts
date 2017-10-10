@@ -18,8 +18,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    this.hikes = this._hikeService.getHikes()
-  }
-
+    this._hikeService.getHikesFrom()
+                                .subscribe(
+                                    res => this.hikes = res,
+                                    err => console.error(err.status));
+                                }
 
 }
