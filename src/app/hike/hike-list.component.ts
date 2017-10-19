@@ -10,6 +10,7 @@ import {Hike} from "../shared/hike";
 })
 export class HikeListComponent implements OnInit {
   hikes:Hike[];
+  searchTerm:string;
 
   constructor(  private _hikeService:HikeService) {
   }
