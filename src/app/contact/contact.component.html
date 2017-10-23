@@ -1,0 +1,24 @@
+<form #form="ngForm" novalidate (submit)="sendMessage(form)">
+  <div class="form-group" [class.has-error]="msgSubject.invalid && msgSubject.touched">
+    <label for="subject" class="control-label">Sujet</label>
+    <input required type="text" ngModel #msgSubject="ngModel" name="subject" class="form-control" id="subject" placeholder="Sujet">
+  </div>
+
+  <div class="form-group" [class.has-error]="msgMessage.invalid && msgMessage.touched">
+    <label class="control-label" for="message">Message</label>
+    <textarea required type="text" #msgMessage="ngModel" ngModel name="message" class="form-control" id="message" placeholder="Message"></textarea>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="service">Service</label>
+    <select multiple class="form-control" id="service" ngModel name="service">
+      <option value="tech">Technique</option>
+      <option value="sales">vente</option>
+      <option value="guide">Guide moyenne montage</option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Envoyer</button>
+</form>
+
+
+
+

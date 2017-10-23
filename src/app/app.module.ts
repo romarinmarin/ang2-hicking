@@ -1,3 +1,6 @@
+import { ContactService } from './contact/contact.service';
+import { ContactComponent } from './contact/contact.component';
+import { ContactModule } from './contact/contact.module';
 import { HikeDetailsComponent } from './hike/hike-details.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { HikeListComponent } from './hike/hike-list.component';
@@ -17,6 +20,7 @@ import {HikeService} from "./hike/hike.service";
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'hikes', component: HikeListComponent },
   { path: 'hikes/:id', component: HikeDetailsComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -32,6 +36,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     HikeModule,
+    ContactModule,
     HomeModule,
     RouterModule.forRoot(
       appRoutes,
@@ -39,7 +44,7 @@ const appRoutes: Routes = [
     )
 
   ],
-  providers: [HikeService],
+  providers: [HikeService, ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
